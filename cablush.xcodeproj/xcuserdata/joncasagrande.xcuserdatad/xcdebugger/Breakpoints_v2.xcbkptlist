@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ContainerViewController.swift"
+            timestampString = "480278620.378769"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "toggleLeftPanel()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ContainerViewController.swift"
+            timestampString = "480280465.709584"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "addLeftPanelViewController()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ContainerViewController.swift"
+            timestampString = "480280533.427438"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "addChildSidePanelController(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/SidePanelViewController.swift"
+            timestampString = "480284686.372562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "SidePanelViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.SidePanelViewController.delegate.getter : Swift.Optional&lt;cablush.SidePanelViewControllerDelegate&gt;"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/SidePanelViewController.swift"
+                  timestampString = "480284398.559301"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.SidePanelViewController.delegate.setter : Swift.Optional&lt;cablush.SidePanelViewControllerDelegate&gt;"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/SidePanelViewController.swift"
+                  timestampString = "480284398.559933"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.SidePanelViewController.delegate.materializeForSet : Swift.Optional&lt;cablush.SidePanelViewControllerDelegate&gt;"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/SidePanelViewController.swift"
+                  timestampString = "480284398.5602"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.SidePanelViewController.init (cablush.SidePanelViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; cablush.SidePanelViewController"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/SidePanelViewController.swift"
+                  timestampString = "480284398.56048"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.SidePanelViewController.init (cablush.SidePanelViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;cablush.SidePanelViewController&gt;"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/SidePanelViewController.swift"
+                  timestampString = "480284398.56069"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ViewController.swift"
+            timestampString = "480369384.102863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "requestDataEventos()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.ViewController.requestDataEventos (cablush.ViewController)() -&gt; ()"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/ViewController.swift"
+                  timestampString = "480301740.483467"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.ViewController.(requestDataEventos (cablush.ViewController) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/ViewController.swift"
+                  timestampString = "480301740.484102"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "170"
+                  endingLineNumber = "170"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ViewController.swift"
+            timestampString = "480369384.102863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "requestDataLojas()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ViewController.swift"
+            timestampString = "480369384.102863"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "requestDataPistas()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/LoginViewController.swift"
+            timestampString = "480301532.703332"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
