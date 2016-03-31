@@ -12,6 +12,10 @@ class CadastroViewController : UIViewController {
    override func viewDidLoad() {
         
     }
+    @IBAction func cadastrar(sender: AnyObject) {
+        print("Create User")
+    }
+    
     @IBAction func cancel(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }

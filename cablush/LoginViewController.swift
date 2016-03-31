@@ -14,15 +14,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usuario: UITextField!
     @IBOutlet weak var senha: UITextField!
     
+    override func viewDidLoad() {
+        
+    }
+
     @IBAction func cancel(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func login(sender: AnyObject) {
+        print("Check if everything is allright")
     }
 
-    override func viewDidLoad() {
-    
-    }
     
 }

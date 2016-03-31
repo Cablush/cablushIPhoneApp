@@ -21,6 +21,10 @@ class SidePanelViewController: UIViewController {
     
 
     var delegate: SidePanelViewControllerDelegate?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     
     @IBAction func buscaLojas(sender: AnyObject) {
@@ -32,9 +36,6 @@ class SidePanelViewController: UIViewController {
     }
     @IBAction func buscaPistas(sender: AnyObject) {
      delegate?.requestDataPistas()
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
     
 }

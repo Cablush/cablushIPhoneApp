@@ -1,34 +1,58 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "EEFD40B7BE63E37D6A818916765142A55AEBE176+++1ACD1C1",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "BA98A7742C4D7D1BD8768BAE451C77F33A888141" : 0,
-    "656329068323E54AA896B6D2A61373D2AEFED519" : 0
+    "656329068323E54AA896B6D2A61373D2AEFED519+++873A1C9" : 0,
+    "BA98A7742C4D7D1BD8768BAE451C77F33A888141+++269E4BC" : 0,
+    "BA98A7742C4D7D1BD8768BAE451C77F33A888141+++2771AA4" : 0,
+    "656329068323E54AA896B6D2A61373D2AEFED519+++EAB9A58" : 0,
+    "656329068323E54AA896B6D2A61373D2AEFED519+++A582F20" : 0,
+    "EEFD40B7BE63E37D6A818916765142A55AEBE176+++1ACD1C1" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0F715B7B-120D-49B2-9FE5-820EB09CB326",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "BA98A7742C4D7D1BD8768BAE451C77F33A888141" : "..\/..\/CablushAndroidApp",
-    "656329068323E54AA896B6D2A61373D2AEFED519" : "..\/..\/Cablush"
+    "656329068323E54AA896B6D2A61373D2AEFED519+++873A1C9" : "..\/Cablush",
+    "BA98A7742C4D7D1BD8768BAE451C77F33A888141+++269E4BC" : "..\/..\/CablushAndroidApp",
+    "BA98A7742C4D7D1BD8768BAE451C77F33A888141+++2771AA4" : "..\/CablushAndroidApp",
+    "656329068323E54AA896B6D2A61373D2AEFED519+++EAB9A58" : "..\/..\/Cablush",
+    "656329068323E54AA896B6D2A61373D2AEFED519+++A582F20" : "..\/..\/Cablush",
+    "EEFD40B7BE63E37D6A818916765142A55AEBE176+++1ACD1C1" : "cablush\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "cablush",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "cablush.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Cablush\/cablushIPhoneApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Cablush\/Cablush.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "656329068323E54AA896B6D2A61373D2AEFED519"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "656329068323E54AA896B6D2A61373D2AEFED519+++873A1C9"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Cablush\/Cablush.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "656329068323E54AA896B6D2A61373D2AEFED519"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "656329068323E54AA896B6D2A61373D2AEFED519+++A582F20"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Cablush\/cablushIPhoneApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "656329068323E54AA896B6D2A61373D2AEFED519+++EAB9A58"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Cablush\/CablushAndroidApp.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BA98A7742C4D7D1BD8768BAE451C77F33A888141"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BA98A7742C4D7D1BD8768BAE451C77F33A888141+++269E4BC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Cablush\/CablushAndroidApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BA98A7742C4D7D1BD8768BAE451C77F33A888141+++2771AA4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Cablush\/cablushIPhoneApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EEFD40B7BE63E37D6A818916765142A55AEBE176+++1ACD1C1"
     }
   ]
 }

@@ -163,30 +163,30 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "cablush.ViewController.requestDataEventos (cablush.ViewController)() -&gt; ()"
+                  symbolName = "cablush.ViewController.requestDataEventos () -&gt; ()"
                   moduleName = "cablush"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/ViewController.swift"
-                  timestampString = "480301740.483467"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/cablush/cablush/ViewController.swift"
+                  timestampString = "481089019.393414"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "169"
-                  endingLineNumber = "169"
-                  offsetFromSymbolStart = "24">
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "396">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "cablush.ViewController.(requestDataEventos (cablush.ViewController) -&gt; () -&gt; ()).(closure #1)"
+                  symbolName = "cablush.ViewController.(requestDataEventos () -&gt; ()).(closure #1)"
                   moduleName = "cablush"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/untitled%20folder/cablush/cablush/ViewController.swift"
-                  timestampString = "480301740.484102"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/cablush/cablush/ViewController.swift"
+                  timestampString = "481089019.393917"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
                   offsetFromSymbolStart = "24">
                </Location>
             </Locations>
@@ -238,6 +238,22 @@
             endingLineNumber = "14"
             landmarkName = "LoginViewController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ViewController.swift"
+            timestampString = "481085385.24138"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "menuTapped(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
