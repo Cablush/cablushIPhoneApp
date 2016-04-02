@@ -21,9 +21,9 @@ protocol ViewControllerDelegate {
     optional func toggleRightPanel()
     optional func collapseSidePanels()
 }
+
 class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDelegate  {
-    // MARK: Button actions
-    
+
     @IBAction func menuTapped(sender: AnyObject) {
         delegate?.toggleLeftPanel?()
     }
@@ -32,7 +32,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     let regionRadius: CLLocationDistance = 1000
     let locationManager = CLLocationManager()
     var delegate: ViewControllerDelegate?
-    
+    var localizaveis = [Localizavel]()
+    var selectedLocalizavel = Localizavel()
     
     override func viewDidLoad() {
         self.mapView.delegate = self
@@ -110,9 +111,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
             anView!.annotation = annotation
         }
         
-        let btnInfo = UIButton(type: UIButtonType.DetailDisclosure)
-        btnInfo.addTarget(self, action: "detail", forControlEvents: UIControlEvents.TouchDown)
-        anView?.rightCalloutAccessoryView = btnInfo
+        let rightButton: AnyObject! = UIButton(type: UIButtonType.DetailDisclosure)
+        anView?.rightCalloutAccessoryView = rightButton as? UIView
         
         let cpa = annotation as! CustomAnnotation
         
@@ -127,10 +127,60 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         
         return anView
     }
+    
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if control == view.rightCalloutAccessoryView {
+            getSelectedLocalizavel((view.annotation?.coordinate)!)
+            performSegueWithIdentifier("LocalizavelDetail", sender: self)
+        }
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if(segue.identifier == "LocalizavelDetail"){
+            let localizavelDetalhesVC = segue.destinationViewController as! LocalizavelDetalhesViewController
+            localizavelDetalhesVC.localizavel = selectedLocalizavel
+        }
+    }
+    
+    
+    
+    func getSelectedLocalizavel(coordenada : CLLocationCoordinate2D){
+        for localizavel in self.localizaveis {
+            if let pista = localizavel as? Pista{
+                if(pista.local.latitude == coordenada.latitude && pista.local.longitude == coordenada.longitude){
+                    selectedLocalizavel  = pista
+                }
+            }else if let loja = localizavel as? Loja{
+                for local in loja.locais{
+                    if(local.latitude == coordenada.latitude && local.longitude == coordenada.longitude){
+                        selectedLocalizavel  = loja
+                    }
+                }
+            }else if let evento = localizavel as? Evento{
+                if(evento.local.latitude == coordenada.latitude && evento.local.longitude == coordenada.longitude){
+                    selectedLocalizavel  = evento
+                }
+            }
+        }
+    }
+    
 }
 
 extension ViewController: SidePanelViewControllerDelegate {
+    func showDialogWait(){
+        let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .Alert)
+        
+        alert.view.tintColor = UIColor.blackColor()
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(10, 5, 50, 50)) as UIActivityIndicatorView
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
     func requestDataPistas() {
+        showDialogWait()
         mapView.removeAnnotations(mapView.annotations)
         let dataRequest = DataRequest();
         dataRequest.data_request("pistas") { (data) -> Void in
@@ -139,17 +189,21 @@ extension ViewController: SidePanelViewControllerDelegate {
                 let parseJson = ParseJson()
                 pistas = parseJson.parseJsonPista(data!)
             }
+            self.localizaveis = pistas
             for pista in pistas{
                 let pin = CLLocationCoordinate2D(latitude: pista.local.latitude, longitude: pista.local.longitude)
                 self.putMapAnotation(pin,localizavel: pista)
                 
             }
+         self.dismissViewControllerAnimated(false, completion: nil)
+         let regionRadius: CLLocationDistance = 15000
+         self.centerMapOnLocation(regionRadius)
         }
-        let regionRadius: CLLocationDistance = 15000
-        self.centerMapOnLocation(regionRadius)
         delegate?.toggleLeftPanel?()
     }
+    
     func requestDataLojas(){
+        showDialogWait()
         mapView.removeAnnotations(mapView.annotations)
         let dataRequest = DataRequest();
         dataRequest.data_request("lojas") { (data) in
@@ -158,15 +212,17 @@ extension ViewController: SidePanelViewControllerDelegate {
                 let parseJson = ParseJson()
                 lojas = parseJson.parseJsonLoja(data!)
             }
+            self.localizaveis = lojas
             for loja in lojas{
                 for local in loja.locais{
                     let pin = CLLocationCoordinate2D(latitude: local.latitude, longitude: local.longitude)
                     self.putMapAnotation(pin,localizavel: loja)
                 }
             }
+            self.dismissViewControllerAnimated(false, completion: nil)
+            let regionRadius: CLLocationDistance = 15000
+            self.centerMapOnLocation(regionRadius)
         }
-        let regionRadius: CLLocationDistance = 15000
-        self.centerMapOnLocation(regionRadius)
      delegate?.toggleLeftPanel?()
     }
     
@@ -179,13 +235,15 @@ extension ViewController: SidePanelViewControllerDelegate {
                 let parseJson = ParseJson()
                 eventos = parseJson.parseJsonEvento(data!)
             }
+            self.localizaveis = eventos
             for evento in eventos{
                 let pin = CLLocationCoordinate2D(latitude: evento.local.latitude, longitude: evento.local.longitude)
                 self.putMapAnotation(pin,localizavel: evento)
             }
+            let regionRadius: CLLocationDistance = 15000
+            self.centerMapOnLocation(regionRadius)
+            self.dismissViewControllerAnimated(false, completion: nil)
         }
-        let regionRadius: CLLocationDistance = 15000
-        self.centerMapOnLocation(regionRadius)
       delegate?.toggleLeftPanel?()
     }
 }
