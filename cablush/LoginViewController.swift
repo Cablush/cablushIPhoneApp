@@ -24,7 +24,22 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(sender: AnyObject) {
         print("Check if everything is allright")
+        
+        if usuario.text != nil && senha.text != nil{
+         dologinRequest(usuario.text!, senha: senha.text!)
+        }
+        
     }
 
+    func dologinRequest(email:String, senha:String){
+        let login = LoginRequest();
+        login.login_request(email, senha: senha) { (data) -> Void in
+            if data != nil{
+                print(data)
+            }
+            
+        }
+        
+    }
     
 }
