@@ -31,7 +31,10 @@ class ContainerViewController: UIViewController,ViewControllerDelegate {
         
         // wrap the centerViewController in a navigation controller, so we can push views to it
         // and display bar button items in the navigation bar
+        
         centerNavigationController = UINavigationController(rootViewController: centerViewController)
+        centerViewController.navigationController?.navigationBar.hidden = true
+        
         view.addSubview(centerNavigationController.view)
         addChildViewController(centerNavigationController)
         
