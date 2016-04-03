@@ -86,11 +86,11 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     func getPinColor(localizavel : Localizavel) -> String{
         var imageName = ""
         if let _ = localizavel as? Pista{
-            imageName = "ic_mark_cablush_orange.png"
+            imageName = "ic_mark_cablush_orange"
         }else if let _ = localizavel as? Evento{
-            imageName = "ic_mark_cablush_blue.png"
+            imageName = "ic_mark_cablush_blue"
         }else if let _ = localizavel as? Loja{
-            imageName = "ic_mark_cablush_green.png"
+            imageName = "ic_mark_cablush_green"
         }
         return imageName
     }
@@ -117,14 +117,14 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         let cpa = annotation as! CustomAnnotation
         
         let pinImage = UIImage(named: cpa.imageName)
-        let size = CGSize(width: 42, height: 42)
-        UIGraphicsBeginImageContext(size)
-        pinImage!.drawInRect(CGRectMake(0, 0, size.width, size.height))
-        let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        //let size = CGSize(width: 42, height: 42)
+        //UIGraphicsBeginImageContext(size)
+        //pinImage!.drawInRect(CGRectMake(0, 0, size.width, size.height))
+        //let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
+        //UIGraphicsEndImageContext()
         
-        anView!.image = resizedImage
-        
+        //anView!.image = resizedImage
+        anView!.image = pinImage!
         return anView
     }
     
