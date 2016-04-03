@@ -22,7 +22,7 @@ struct ParseJson {
                     if let hora = item["horario"]!{
                         pista.horario = setHorario(hora)
                     }
-                    pista.img_url          = item["foto_url"]as? String ?? ""
+                    pista.img_url = item["foto_url"]as? String ?? ""
                     pistas.append(pista)
                 }
             }
@@ -43,7 +43,7 @@ struct ParseJson {
                     if let loc = item["local"]!{
                         evento.local =  setLocal(loc)
                     }
-                    evento.img_url          = item["flyer_url"]as? String ?? ""
+                    evento.img_url = item["flyer_url"]as? String ?? ""
                     eventos.append(evento)
                 }
             }
@@ -63,7 +63,7 @@ struct ParseJson {
                     setLocalizavel(item as! NSDictionary,localizavel: loja)
                     loja.locais =  setLocais(item["locais"] as! NSArray)
                     loja.email = item["email"] as? String ?? ""
-                    loja.img_url          = item["logo_url"]as? String ?? ""
+                    loja.img_url = item["logo_url"]as? String ?? ""
                     if let hora = item["horario"]!{
                         loja.horario = setHorario(hora)
                     }
@@ -80,7 +80,7 @@ struct ParseJson {
     func setLocalizavel(item :NSDictionary, localizavel: Localizavel){
         localizavel.nome             = item["nome"] as? String ?? ""
         localizavel.descricao        = item["descricao"] as? String ?? ""
-        localizavel.facebook         = item["faceboook"] as? String ?? ""
+        localizavel.facebook         = item["facebook"] as? String ?? ""
         localizavel.responsavel_uuid = item["responsavel_uuid"] as? String ?? ""
         localizavel.uuid             = item["uuid"] as? String ?? ""
         localizavel.website          = item["website"] as? String ?? ""

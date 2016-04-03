@@ -112,7 +112,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Cablush" id="dJW-Cz-d7Q">
-                                        <barButtonItem key="leftBarButtonItem" image="menu.png" style="done" id="Icu-4O-gDo">
+                                        <barButtonItem key="leftBarButtonItem" image="menu" style="done" id="Icu-4O-gDo">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="menuTapped:" destination="SVl-5d-KgW" id="anT-d4-Vsm"/>
@@ -166,7 +166,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Cablush" id="PnE-3b-4La">
-                                        <barButtonItem key="leftBarButtonItem" image="back.png" id="7TD-sj-J6W">
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="7TD-sj-J6W">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="back:" destination="QLe-n4-BZ5" id="O3T-BX-ZBw"/>
@@ -178,7 +178,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Dd-lU-qOx">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQ0-RY-LhZ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQ0-RY-LhZ">
                                         <rect key="frame" x="8" y="16" width="398" height="198"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Localizavel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2qF-nj-AUW">
@@ -206,7 +206,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0a-jn-6sZ">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_ic_mail_outline_blue" translatesAutoresizingMaskIntoConstraints="NO" id="g0a-jn-6sZ">
                                         <rect key="frame" x="8" y="472" width="32" height="37"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ3-gn-qM5">
@@ -215,7 +215,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dz4-1v-6WM">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_ic_phone_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Dz4-1v-6WM">
                                         <rect key="frame" x="8" y="427" width="32" height="37"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Site" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlj-3a-eKC">
@@ -224,7 +224,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U6y-g1-qoH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_ic_language_blue" translatesAutoresizingMaskIntoConstraints="NO" id="U6y-g1-qoH">
                                         <rect key="frame" x="8" y="517" width="32" height="37"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lM-2Z-UGn">
@@ -233,7 +233,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-ua-cCC">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_facebook_blue" translatesAutoresizingMaskIntoConstraints="NO" id="FbO-ua-cCC">
                                         <rect key="frame" x="8" y="562" width="32" height="37"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Endereco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTc-gJ-4zO">
@@ -242,7 +242,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-0y-grx">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_action_ic_business_blue" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-0y-grx">
                                         <rect key="frame" x="8" y="607" width="32" height="37"/>
                                     </imageView>
                                 </subviews>
@@ -313,7 +313,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Cadastrar" id="YaU-YX-eg3">
-                                        <barButtonItem key="leftBarButtonItem" image="back.png" id="MnN-FW-Hs7">
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="MnN-FW-Hs7">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="cancel:" destination="CDw-9k-lZ9" id="yJU-3r-jge"/>
@@ -471,7 +471,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Login" id="KgW-k7-13Z">
-                                        <barButtonItem key="leftBarButtonItem" image="back.png" id="FfR-Vn-jbb">
+                                        <barButtonItem key="leftBarButtonItem" image="back" id="FfR-Vn-jbb">
                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="cancel:" destination="XeW-DX-Hth" id="Qrx-2b-ugh"/>
@@ -559,11 +559,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back.png" width="24" height="24"/>
+        <image name="back" width="24" height="24"/>
+        <image name="ic_action_facebook_blue" width="48" height="48"/>
+        <image name="ic_action_ic_business_blue" width="48" height="48"/>
+        <image name="ic_action_ic_language_blue" width="48" height="48"/>
+        <image name="ic_action_ic_mail_outline_blue" width="48" height="48"/>
+        <image name="ic_action_ic_phone_blue" width="48" height="48"/>
         <image name="ic_mark_cablush_blue.png" width="128" height="128"/>
         <image name="ic_mark_cablush_green.png" width="128" height="128"/>
         <image name="ic_mark_cablush_orange.png" width="128" height="128"/>
         <image name="logo_azul.png" width="2048" height="2048"/>
-        <image name="menu.png" width="28" height="20"/>
+        <image name="menu" width="28" height="20"/>
     </resources>
 </document>
