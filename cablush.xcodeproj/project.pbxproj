@@ -7,15 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D065FE51CACC9420004BA20 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D065FE31CACC9420004BA20 /* menu.png */; };
-		0D065FE61CACC9420004BA20 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D065FE41CACC9420004BA20 /* menu@2x.png */; };
-		0D2860D51CACCCCC0081EFD9 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860D31CACCCCC0081EFD9 /* back.png */; };
-		0D2860D81CACCD2E0081EFD9 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860D71CACCD2E0081EFD9 /* back@2x.png */; };
 		0D2860DA1CACCD7F0081EFD9 /* logo_azul.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860D91CACCD7F0081EFD9 /* logo_azul.png */; };
 		0D2860DC1CACCDCD0081EFD9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860DB1CACCDCD0081EFD9 /* logo.png */; };
-		0D2860E01CACD1890081EFD9 /* ic_mark_cablush_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860DD1CACD1890081EFD9 /* ic_mark_cablush_blue.png */; };
-		0D2860E11CACD1890081EFD9 /* ic_mark_cablush_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860DE1CACD1890081EFD9 /* ic_mark_cablush_green.png */; };
-		0D2860E21CACD1890081EFD9 /* ic_mark_cablush_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860DF1CACD1890081EFD9 /* ic_mark_cablush_orange.png */; };
 		0D2860E41CACD7B30081EFD9 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E31CACD7B30081EFD9 /* Usuario.swift */; };
 		0D2860E61CAD4D660081EFD9 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E51CAD4D660081EFD9 /* LoginRequest.swift */; };
 		0D2860E81CAEB9A50081EFD9 /* LocalizavelDetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E71CAEB9A40081EFD9 /* LocalizavelDetalhesViewController.swift */; };
@@ -62,15 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D065FE31CACC9420004BA20 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
-		0D065FE41CACC9420004BA20 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
-		0D2860D31CACCCCC0081EFD9 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		0D2860D71CACCD2E0081EFD9 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "back@2x.png"; path = "../../../../Downloads/back@2x.png"; sourceTree = "<group>"; };
 		0D2860D91CACCD7F0081EFD9 /* logo_azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_azul.png; path = ../../../CablushAndroidApp/imgs/logo_azul.png; sourceTree = "<group>"; };
 		0D2860DB1CACCDCD0081EFD9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../Cablush/app/assets/images/logo.png; sourceTree = "<group>"; };
-		0D2860DD1CACD1890081EFD9 /* ic_mark_cablush_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_mark_cablush_blue.png; sourceTree = "<group>"; };
-		0D2860DE1CACD1890081EFD9 /* ic_mark_cablush_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_mark_cablush_green.png; sourceTree = "<group>"; };
-		0D2860DF1CACD1890081EFD9 /* ic_mark_cablush_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_mark_cablush_orange.png; sourceTree = "<group>"; };
 		0D2860E31CACD7B30081EFD9 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		0D2860E51CAD4D660081EFD9 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		0D2860E71CAEB9A40081EFD9 /* LocalizavelDetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizavelDetalhesViewController.swift; sourceTree = "<group>"; };
@@ -134,15 +120,8 @@
 		0D065FE01CACC9030004BA20 /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				0D2860DD1CACD1890081EFD9 /* ic_mark_cablush_blue.png */,
-				0D2860DE1CACD1890081EFD9 /* ic_mark_cablush_green.png */,
-				0D2860DF1CACD1890081EFD9 /* ic_mark_cablush_orange.png */,
 				0D2860DB1CACCDCD0081EFD9 /* logo.png */,
 				0D2860D91CACCD7F0081EFD9 /* logo_azul.png */,
-				0D2860D31CACCCCC0081EFD9 /* back.png */,
-				0D2860D71CACCD2E0081EFD9 /* back@2x.png */,
-				0D065FE31CACC9420004BA20 /* menu.png */,
-				0D065FE41CACC9420004BA20 /* menu@2x.png */,
 			);
 			name = assets;
 			sourceTree = "<group>";
@@ -347,17 +326,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE732151CA06B2500C8B956 /* LaunchScreen.storyboard in Resources */,
-				0D065FE61CACC9420004BA20 /* menu@2x.png in Resources */,
 				0D2860DC1CACCDCD0081EFD9 /* logo.png in Resources */,
-				0D2860D51CACCCCC0081EFD9 /* back.png in Resources */,
-				0D2860D81CACCD2E0081EFD9 /* back@2x.png in Resources */,
 				0D2860DA1CACCD7F0081EFD9 /* logo_azul.png in Resources */,
-				0D065FE51CACC9420004BA20 /* menu.png in Resources */,
 				0DE732121CA06B2500C8B956 /* Assets.xcassets in Resources */,
 				0DE7320D1CA06B2500C8B956 /* Main.storyboard in Resources */,
-				0D2860E01CACD1890081EFD9 /* ic_mark_cablush_blue.png in Resources */,
-				0D2860E11CACD1890081EFD9 /* ic_mark_cablush_green.png in Resources */,
-				0D2860E21CACD1890081EFD9 /* ic_mark_cablush_orange.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

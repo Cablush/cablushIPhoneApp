@@ -215,7 +215,7 @@
                   moduleName = "cablush"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/cablush/cablush/LoginRequest.swift"
-                  timestampString = "481266036.415389"
+                  timestampString = "481345549.930619"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
@@ -230,7 +230,7 @@
                   moduleName = "cablush"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/cablush/cablush/LoginRequest.swift"
-                  timestampString = "481266036.415736"
+                  timestampString = "481345549.9309"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "26"
@@ -463,7 +463,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cablush/LocalizavelDetalhesViewController.swift"
@@ -474,6 +474,118 @@
             endingLineNumber = "36"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ParseJson.swift"
+            timestampString = "481341766.527288"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "parseJsonPista(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/ParseJson.swift"
+            timestampString = "481341886.593523"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "parseJsonPista(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/LocalizavelDetalhesViewController.swift"
+            timestampString = "481344821.080759"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "downloadImage(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/LocalizavelDetalhesViewController.swift"
+            timestampString = "481345547.418503"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "downloadImage(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "cablush/LocalizavelDetalhesViewController.swift"
+            timestampString = "481345577.740825"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "downloadImage(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.LocalizavelDetalhesViewController.(downloadImage (__ObjC.NSURL) -&gt; ()).(closure #1)"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/cablush/cablush/LocalizavelDetalhesViewController.swift"
+                  timestampString = "481345577.754905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "cablush.LocalizavelDetalhesViewController.(downloadImage (__ObjC.NSURL) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "cablush"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joncasagrande/Desenvolvimento/cablushIPhone/cablush/cablush/LocalizavelDetalhesViewController.swift"
+                  timestampString = "481345577.755111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "372">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
