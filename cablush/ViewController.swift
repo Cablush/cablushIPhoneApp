@@ -50,6 +50,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
+        centerMapOnLocation(regionRadius)
+        
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {}
@@ -59,7 +61,10 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
             let locValue:CLLocationCoordinate2D = locationManager.location!.coordinate
             
             let location = CLLocation(latitude: locValue.latitude, longitude: locValue.longitude)
-            mapView.showsCompass = true
+            if #available(iOS 9.0, *) {
+                mapView.showsCompass = true
+                mapView.showsUserLocation = true
+            } 
             mapView.showsUserLocation = true
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                 regionRadius * 2.0, regionRadius * 2.0)
@@ -117,14 +122,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         let cpa = annotation as! CustomAnnotation
         
         let pinImage = UIImage(named: cpa.imageName)
-        //let size = CGSize(width: 42, height: 42)
-        //UIGraphicsBeginImageContext(size)
-        //pinImage!.drawInRect(CGRectMake(0, 0, size.width, size.height))
-        //let resizedImage = UIGraphicsGetImageFromCurrentImageContext()
-        //UIGraphicsEndImageContext()
-        
-        //anView!.image = resizedImage
-        anView!.image = pinImage!
+         anView!.image = pinImage!
         return anView
     }
     
@@ -166,6 +164,8 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
 }
 
 extension ViewController: SidePanelViewControllerDelegate {
+   
+    
     func showDialogWait(){
         let alert = UIAlertController(title: nil, message: "Please wait...", preferredStyle: .Alert)
         
@@ -178,72 +178,81 @@ extension ViewController: SidePanelViewControllerDelegate {
         alert.view.addSubview(loadingIndicator)
         presentViewController(alert, animated: true, completion: nil)
     }
-    
+ 
     func requestDataPistas() {
         showDialogWait()
         mapView.removeAnnotations(mapView.annotations)
-        let dataRequest = DataRequest();
-        dataRequest.data_request("pistas") { (data) -> Void in
-            var pistas = [Pista]()
-            if data != nil{
-                let parseJson = ParseJson()
-                pistas = parseJson.parseJsonPista(data!)
+        
+            let dataRequest = DataRequest();
+            dataRequest.data_request("pistas") { (data) -> Void in
+                var pistas = [Pista]()
+                if data != nil{
+                    let parseJson = ParseJson()
+                    pistas = parseJson.parseJsonPista(data!)
+                }
+                self.localizaveis = pistas
+                for pista in pistas{
+                    let pin = CLLocationCoordinate2D(latitude: pista.local.latitude, longitude: pista.local.longitude)
+                    self.putMapAnotation(pin,localizavel: pista)
+                }
+                dispatch_async(dispatch_get_main_queue(),{
+                    let regionRadius: CLLocationDistance = 15000
+                    self.centerMapOnLocation(regionRadius)
+                 });
+            self.dismissViewControllerAnimated(false, completion: nil)
             }
-            self.localizaveis = pistas
-            for pista in pistas{
-                let pin = CLLocationCoordinate2D(latitude: pista.local.latitude, longitude: pista.local.longitude)
-                self.putMapAnotation(pin,localizavel: pista)
-                
-            }
-         self.dismissViewControllerAnimated(false, completion: nil)
-         let regionRadius: CLLocationDistance = 15000
-         self.centerMapOnLocation(regionRadius)
-        }
+        
         delegate?.toggleLeftPanel?()
     }
     
     func requestDataLojas(){
         showDialogWait()
         mapView.removeAnnotations(mapView.annotations)
-        let dataRequest = DataRequest();
-        dataRequest.data_request("lojas") { (data) in
-            var lojas = [Loja]()
-            if data != nil{
-                let parseJson = ParseJson()
-                lojas = parseJson.parseJsonLoja(data!)
-            }
-            self.localizaveis = lojas
-            for loja in lojas{
-                for local in loja.locais{
-                    let pin = CLLocationCoordinate2D(latitude: local.latitude, longitude: local.longitude)
-                    self.putMapAnotation(pin,localizavel: loja)
+            let dataRequest = DataRequest();
+            dataRequest.data_request("lojas") { (data) in
+                var lojas = [Loja]()
+                if data != nil{
+                    let parseJson = ParseJson()
+                    lojas = parseJson.parseJsonLoja(data!)
                 }
+                self.localizaveis = lojas
+                for loja in lojas{
+                    for local in loja.locais{
+                        let pin = CLLocationCoordinate2D(latitude: local.latitude, longitude: local.longitude)
+                        self.putMapAnotation(pin,localizavel: loja)
+                    }
+                }
+                dispatch_async(dispatch_get_main_queue(),{
+                    let regionRadius: CLLocationDistance = 15000
+                    self.centerMapOnLocation(regionRadius)
+                });
+                self.dismissViewControllerAnimated(false, completion: nil)
             }
-            self.dismissViewControllerAnimated(false, completion: nil)
-            let regionRadius: CLLocationDistance = 15000
-            self.centerMapOnLocation(regionRadius)
-        }
      delegate?.toggleLeftPanel?()
     }
     
     func requestDataEventos(){
+        showDialogWait()
         mapView.removeAnnotations(mapView.annotations)
-        let dataRequest = DataRequest();
-        dataRequest.data_request("eventos") { (data) -> Void in
-            var eventos = [Evento]()
-            if data != nil{
-                let parseJson = ParseJson()
-                eventos = parseJson.parseJsonEvento(data!)
+            let dataRequest = DataRequest();
+            dataRequest.data_request("eventos") { (data) -> Void in
+                var eventos = [Evento]()
+                if data != nil{
+                    let parseJson = ParseJson()
+                    eventos = parseJson.parseJsonEvento(data!)
+                }
+                self.localizaveis = eventos
+                for evento in eventos{
+                    let pin = CLLocationCoordinate2D(latitude: evento.local.latitude, longitude: evento.local.longitude)
+                    self.putMapAnotation(pin,localizavel: evento)
+                }
+                dispatch_async(dispatch_get_main_queue(),{
+                    let regionRadius: CLLocationDistance = 15000
+                    self.centerMapOnLocation(regionRadius)
+                });
+                self.dismissViewControllerAnimated(false, completion: nil)
             }
-            self.localizaveis = eventos
-            for evento in eventos{
-                let pin = CLLocationCoordinate2D(latitude: evento.local.latitude, longitude: evento.local.longitude)
-                self.putMapAnotation(pin,localizavel: evento)
-            }
-            let regionRadius: CLLocationDistance = 15000
-            self.centerMapOnLocation(regionRadius)
-            self.dismissViewControllerAnimated(false, completion: nil)
-        }
+        
       delegate?.toggleLeftPanel?()
     }
 }
