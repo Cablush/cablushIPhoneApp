@@ -8,6 +8,7 @@
 
 import Foundation
 struct Local {
+    var logradouro = ""
     var bairro=""
     var cep = ""
     var cidade = ""
@@ -18,4 +19,7 @@ struct Local {
     var numero = ""
     var pais = ""
     
+    func toString() -> String {
+        return "\(logradouro) \(numero) \(cidade)"
+    }
 }

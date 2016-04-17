@@ -10,6 +10,7 @@ import Foundation
 class Pista: Localizavel {
     var horario = Horario()
     var local = Local()
+    var video :String = ""
     
     
 }

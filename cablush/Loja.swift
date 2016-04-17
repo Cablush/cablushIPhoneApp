@@ -9,6 +9,7 @@
 import Foundation
 class Loja : Localizavel {
     var email = ""
+    var telefone = ""
     var locais = [Local]()
     var horario = Horario()
 
