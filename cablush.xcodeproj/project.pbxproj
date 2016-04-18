@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D2860DA1CACCD7F0081EFD9 /* logo_azul.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860D91CACCD7F0081EFD9 /* logo_azul.png */; };
-		0D2860DC1CACCDCD0081EFD9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D2860DB1CACCDCD0081EFD9 /* logo.png */; };
+		0D0A386C1CBC61C600FE0F98 /* MenuCadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A386B1CBC61C600FE0F98 /* MenuCadViewController.swift */; };
+		0D0A386E1CBC6B9C00FE0F98 /* CadPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0A386D1CBC6B9C00FE0F98 /* CadPageViewController.swift */; };
 		0D2860E41CACD7B30081EFD9 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E31CACD7B30081EFD9 /* Usuario.swift */; };
 		0D2860E61CAD4D660081EFD9 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E51CAD4D660081EFD9 /* LoginRequest.swift */; };
 		0D2860E81CAEB9A50081EFD9 /* LocalizavelDetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E71CAEB9A40081EFD9 /* LocalizavelDetalhesViewController.swift */; };
@@ -55,8 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D2860D91CACCD7F0081EFD9 /* logo_azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_azul.png; path = ../../../CablushAndroidApp/imgs/logo_azul.png; sourceTree = "<group>"; };
-		0D2860DB1CACCDCD0081EFD9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../Cablush/app/assets/images/logo.png; sourceTree = "<group>"; };
+		0D0A386B1CBC61C600FE0F98 /* MenuCadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCadViewController.swift; sourceTree = "<group>"; };
+		0D0A386D1CBC6B9C00FE0F98 /* CadPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CadPageViewController.swift; sourceTree = "<group>"; };
 		0D2860E31CACD7B30081EFD9 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		0D2860E51CAD4D660081EFD9 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		0D2860E71CAEB9A40081EFD9 /* LocalizavelDetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizavelDetalhesViewController.swift; sourceTree = "<group>"; };
@@ -117,15 +117,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D065FE01CACC9030004BA20 /* assets */ = {
-			isa = PBXGroup;
-			children = (
-				0D2860DB1CACCDCD0081EFD9 /* logo.png */,
-				0D2860D91CACCD7F0081EFD9 /* logo_azul.png */,
-			);
-			name = assets;
-			sourceTree = "<group>";
-		};
 		0DE731FB1CA06B2400C8B956 = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +141,6 @@
 		0DE732061CA06B2500C8B956 /* cablush */ = {
 			isa = PBXGroup;
 			children = (
-				0D065FE01CACC9030004BA20 /* assets */,
 				0DE732591CA089F300C8B956 /* helpers */,
 				0DE7324C1CA06F9D00C8B956 /* controllers */,
 				0DE732391CA06B5000C8B956 /* model */,
@@ -206,6 +196,8 @@
 				0DE732661CA0CD4500C8B956 /* LoginViewController.swift */,
 				0DE7326C1CA1CA4B00C8B956 /* CadastroViewController.swift */,
 				0D2860E71CAEB9A40081EFD9 /* LocalizavelDetalhesViewController.swift */,
+				0D0A386B1CBC61C600FE0F98 /* MenuCadViewController.swift */,
+				0D0A386D1CBC6B9C00FE0F98 /* CadPageViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -289,6 +281,7 @@
 				TargetAttributes = {
 					0DE732031CA06B2400C8B956 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 4BFSL4J75W;
 					};
 					0DE7321A1CA06B2600C8B956 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -326,8 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE732151CA06B2500C8B956 /* LaunchScreen.storyboard in Resources */,
-				0D2860DC1CACCDCD0081EFD9 /* logo.png in Resources */,
-				0D2860DA1CACCD7F0081EFD9 /* logo_azul.png in Resources */,
 				0DE732121CA06B2500C8B956 /* Assets.xcassets in Resources */,
 				0DE7320D1CA06B2500C8B956 /* Main.storyboard in Resources */,
 			);
@@ -354,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D0A386E1CBC6B9C00FE0F98 /* CadPageViewController.swift in Sources */,
 				0DA50FBC1CA1E2080075282D /* Evento.swift in Sources */,
 				0DE7324B1CA06EAC00C8B956 /* SidePanelViewController.swift in Sources */,
 				0D2860E61CAD4D660081EFD9 /* LoginRequest.swift in Sources */,
@@ -363,6 +355,7 @@
 				0DA50FC01CA1E2080075282D /* Pista.swift in Sources */,
 				0DE7320A1CA06B2500C8B956 /* ViewController.swift in Sources */,
 				0DA50FC51CA1E2210075282D /* DataRequest.swift in Sources */,
+				0D0A386C1CBC61C600FE0F98 /* MenuCadViewController.swift in Sources */,
 				0DA50FBF1CA1E2080075282D /* Loja.swift in Sources */,
 				0DE732671CA0CD4500C8B956 /* LoginViewController.swift in Sources */,
 				0DE732081CA06B2500C8B956 /* AppDelegate.swift in Sources */,
@@ -514,11 +507,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = cablush/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cablush.cablush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -527,11 +523,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = cablush/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cablush.cablush;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
