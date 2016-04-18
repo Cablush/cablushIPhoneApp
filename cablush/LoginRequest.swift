@@ -12,13 +12,15 @@ class LoginRequest{
     
     func login_request(email: String, senha :String, completion: (data: NSData?) ->Void )
     {
-        let myUrl = NSURL(string: "http://www.cablush.com/usuarios/sign_in")
+        let myUrl = NSURL(string: "http://www.cablush.com/api/usuarios/sign_in")
         let request = NSMutableURLRequest(URL:myUrl!)
         request.HTTPMethod = "POST"
-        let jsonString = "usuario:{email:\(email),senha:\(senha)"
+        let jsonString = "{\"usuario\":{\"email\":\"\(email)\", \"password\":\"\(senha)\"}}"
         request.HTTPBody = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
         request.HTTPMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
 
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
             data, response, error in
@@ -28,6 +30,9 @@ class LoginRequest{
                 print("error=\(error)")
                 return
             }
+            if response == nil{
+                print(response)
+            }
             //Let’s convert response sent from a server side script to a NSDictionary object:
             if data != nil{
                 completion(data: data!)
@@ -35,7 +40,7 @@ class LoginRequest{
         }
         task.resume()
     }
-    
+    //Registro request
     func registro_request(name: String,email: String, senha :String, completion: (data: NSData?) ->Void )
     {
         let myUrl = NSURL(string: "http://www.cablush.com/usuarios")
