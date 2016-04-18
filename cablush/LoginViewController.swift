@@ -34,12 +34,15 @@ class LoginViewController: UIViewController {
     func dologinRequest(email:String, senha:String){
         let login = LoginRequest();
         login.login_request(email, senha: senha) { (data) -> Void in
+           let parseJson = ParseJson()
             if data != nil{
-                print(data)
+                parseJson.parseJsonUsuario(data!)
+                let usuario = Usuario()
+                let users = usuario.loadUser()
+                print(users)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
-            
         }
-        
     }
     
 }
