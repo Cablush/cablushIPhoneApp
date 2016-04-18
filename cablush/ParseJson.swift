@@ -8,6 +8,31 @@
 
 import Foundation
 struct ParseJson {
+    
+    func parseJsonUsuario(data: NSData){
+        let usuario :Usuario;
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments);
+            
+            let uuid        = json["uuid"] as? String ?? ""
+            let nome        = json["nome"] as? String ?? ""
+            let email       = json["email"] as? String ?? ""
+            let password    = json["password"] as? String ?? ""
+            let accessToken = json["authentication_token"] as? String ?? ""
+            let role        = json["role"] as? String ?? ""
+            
+            usuario = Usuario(uuid: uuid, nome: nome, email: email, password: password, role: role, accessToken: accessToken)!
+            
+            if let esportes = json["esportes"] as? NSArray {
+                usuario.setEsportes(esportes)
+            }
+            usuario.saveUser()
+        } catch {
+            print(error)
+        }
+        
+    }
+    
     func parseJsonPista(data: NSData)->[Pista]{
        var pistas = [Pista]()
         do {
@@ -23,6 +48,7 @@ struct ParseJson {
                         pista.horario = setHorario(hora)
                     }
                     pista.img_url = item["foto_url"]as? String ?? ""
+                    pista.video = item["video"]as? String ?? ""
                     pistas.append(pista)
                 }
             }
@@ -63,6 +89,7 @@ struct ParseJson {
                     setLocalizavel(item as! NSDictionary,localizavel: loja)
                     loja.locais =  setLocais(item["locais"] as! NSArray)
                     loja.email = item["email"] as? String ?? ""
+                    loja.telefone = item["telefone"]as? String ?? ""
                     loja.img_url = item["logo_url"]as? String ?? ""
                     if let hora = item["horario"]!{
                         loja.horario = setHorario(hora)
@@ -90,8 +117,10 @@ struct ParseJson {
         }
     }
     
+    
     func setLocal(loc :AnyObject)->Local{
         var local = Local()
+        local.logradouro    = loc["logradouro"] as? String ?? ""
         local.bairro        = loc["bairro"] as? String ?? ""
         local.cep           = loc["cep"] as? String ?? ""
         local.cidade        = loc["cidade"] as? String ?? ""
@@ -113,6 +142,7 @@ struct ParseJson {
         var listLocais = [Local]()
         for loc in locais{
             var local = Local()
+            local.logradouro    = loc["logradouro"] as? String ?? ""
             local.bairro        = loc["bairro"] as? String ?? ""
             local.cep           = loc["cep"] as? String ?? ""
             local.cidade        = loc["cidade"] as? String ?? ""
