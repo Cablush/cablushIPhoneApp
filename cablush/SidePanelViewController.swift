@@ -19,11 +19,17 @@ protocol SidePanelViewControllerDelegate {
 
 class SidePanelViewController: UIViewController {
     
+    @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var cadastroBtn: UIButton!
 
     var delegate: SidePanelViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !Usuario.usuario.accessToken.isEmpty {
+            loginBtn.hidden = true
+            cadastroBtn.hidden = true
+        }
     }
 
     
