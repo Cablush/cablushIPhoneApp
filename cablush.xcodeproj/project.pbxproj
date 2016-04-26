@@ -12,6 +12,7 @@
 		0D2860E41CACD7B30081EFD9 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E31CACD7B30081EFD9 /* Usuario.swift */; };
 		0D2860E61CAD4D660081EFD9 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E51CAD4D660081EFD9 /* LoginRequest.swift */; };
 		0D2860E81CAEB9A50081EFD9 /* LocalizavelDetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2860E71CAEB9A40081EFD9 /* LocalizavelDetalhesViewController.swift */; };
+		0D8278D51CCEA227007179D4 /* LojaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8278D41CCEA226007179D4 /* LojaViewController.swift */; };
 		0DA50FBB1CA1E2080075282D /* Esporte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA50FB51CA1E2080075282D /* Esporte.swift */; };
 		0DA50FBC1CA1E2080075282D /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA50FB61CA1E2080075282D /* Evento.swift */; };
 		0DA50FBD1CA1E2080075282D /* Horario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA50FB71CA1E2080075282D /* Horario.swift */; };
@@ -60,6 +61,7 @@
 		0D2860E31CACD7B30081EFD9 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		0D2860E51CAD4D660081EFD9 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		0D2860E71CAEB9A40081EFD9 /* LocalizavelDetalhesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizavelDetalhesViewController.swift; sourceTree = "<group>"; };
+		0D8278D41CCEA226007179D4 /* LojaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LojaViewController.swift; sourceTree = "<group>"; };
 		0DA50FB51CA1E2080075282D /* Esporte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Esporte.swift; sourceTree = "<group>"; };
 		0DA50FB61CA1E2080075282D /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		0DA50FB71CA1E2080075282D /* Horario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Horario.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				0D2860E71CAEB9A40081EFD9 /* LocalizavelDetalhesViewController.swift */,
 				0D0A386B1CBC61C600FE0F98 /* MenuCadViewController.swift */,
 				0D0A386D1CBC6B9C00FE0F98 /* CadPageViewController.swift */,
+				0D8278D41CCEA226007179D4 /* LojaViewController.swift */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				0DE7320A1CA06B2500C8B956 /* ViewController.swift in Sources */,
 				0DA50FC51CA1E2210075282D /* DataRequest.swift in Sources */,
 				0D0A386C1CBC61C600FE0F98 /* MenuCadViewController.swift in Sources */,
+				0D8278D51CCEA227007179D4 /* LojaViewController.swift in Sources */,
 				0DA50FBF1CA1E2080075282D /* Loja.swift in Sources */,
 				0DE732671CA0CD4500C8B956 /* LoginViewController.swift in Sources */,
 				0DE732081CA06B2500C8B956 /* AppDelegate.swift in Sources */,

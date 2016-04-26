@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ic_action_ic_mail_outline_blue.png",
+      "filename" : "ic_action_ic_photo_blue.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ic_action_ic_mail_outline_blue@2x.png",
+      "filename" : "ic_action_ic_photo_blue-2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ic_action_ic_mail_outline_blue-1.png",
+      "filename" : "ic_action_ic_photo_blue-1.png",
       "scale" : "3x"
     }
   ],
