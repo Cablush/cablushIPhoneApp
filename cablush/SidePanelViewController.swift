@@ -26,6 +26,9 @@ class SidePanelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         if !Usuario.usuario.accessToken.isEmpty {
             loginBtn.hidden = true
             cadastroBtn.hidden = true
