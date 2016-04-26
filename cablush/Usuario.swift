@@ -7,17 +7,7 @@
 //
 
 import Foundation
-struct PropertyKey {
-    static let nomeKey = "nome"
-    static let uuidKey = "uuid"
-    static let emailKey = "email"
-    static let passwordKey = "password"
-    static let roleKey = "role"
-    static let accessTokenKey = "accessToken"
-    static let esportesKey = "esportes"
-}
-
-class Usuario: NSObject{
+class Usuario: NSObject,NSCoding{
     @nonobjc static var usuario = Usuario()
     var uuid        :String = ""
     var nome        :String = ""
@@ -26,6 +16,20 @@ class Usuario: NSObject{
     var role        :String = ""
     var accessToken :String = ""
     var esportes    :[Esporte] = []
+    
+    struct PropertyKey {
+        static let nomeKey = "nome"
+        static let uuidKey = "uuid"
+        static let emailKey = "email"
+        static let passwordKey = "password"
+        static let roleKey = "role"
+        static let accessTokenKey = "accessToken"
+        static let esportesKey = "esportes"
+    }
+    
+    static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("usuario")
+    
     
     override init(){}
     
@@ -51,9 +55,14 @@ class Usuario: NSObject{
     @objc required convenience init?(coder aDecoder: NSCoder) {
         let nome = aDecoder.decodeObjectForKey(PropertyKey.nomeKey) as! String
         let email = aDecoder.decodeObjectForKey(PropertyKey.emailKey) as! String
-        let password = aDecoder.decodeObjectForKey(PropertyKey.passwordKey) as! String
+        let password = aDecoder.decodeObjectForKey(PropertyKey.passwordKey) as? String ?? ""
+        let accessToken = aDecoder.decodeObjectForKey(PropertyKey.accessTokenKey) as? String ?? ""
+        let role = aDecoder.decodeObjectForKey(PropertyKey.roleKey) as? String ?? ""
+        let uuid = aDecoder.decodeObjectForKey(PropertyKey.uuidKey) as? String ?? ""
         
-        self.init(nome: nome, email: email,password: password)
+        
+        
+        self.init(uuid: uuid, nome: nome, email: email,password: password, role: role, accessToken: accessToken)
         
     }
     
@@ -67,17 +76,15 @@ class Usuario: NSObject{
             self.esportes.append(esp)
         }
     }
-}
-
-extension Usuario : NSCoding{
     // MARK Coding
-    @nonobjc static let DocumentsDirectory = NSFileManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-     @nonobjc static let ArchiveURL = DocumentsDirectory.URLByAppendingPathComponent("usuario")
     
     @objc func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(nome, forKey: PropertyKey.nomeKey)
         aCoder.encodeObject(email, forKey: PropertyKey.emailKey)
         aCoder.encodeObject(password, forKey: PropertyKey.passwordKey)
+        aCoder.encodeObject(role, forKey: PropertyKey.roleKey)
+        aCoder.encodeObject(accessToken, forKey: PropertyKey.accessTokenKey)
+        aCoder.encodeObject(uuid, forKey: PropertyKey.uuidKey)
     }
     
     //Saving
@@ -94,8 +101,9 @@ extension Usuario : NSCoding{
     }
     
     //loading
-    func loadUser() -> [Usuario]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Usuario.ArchiveURL.path!) as? [Usuario]
+    static func loadUsuario() -> Usuario? {
+         let users = NSKeyedUnarchiver.unarchiveObjectWithFile(Usuario.ArchiveURL.path!)
+        return users as? Usuario
     }
     
 }
