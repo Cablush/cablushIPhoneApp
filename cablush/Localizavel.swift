@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Localizavel {
+class Localizavel: NSObject {
     var uuid = ""
     var nome = ""
     var descricao = ""
@@ -19,6 +19,43 @@ class Localizavel {
 
     var responsavel = ""
     var esportes = [Esporte]()
+    
+    
+    struct LocalizavelPropertyKey {
+        static let nomeKey = "nome"
+        static let uuidKey = "uuid"
+        static let descricaoKey = "descricao"
+        static let facebookKey = "facebook"
+        static let websiteKey = "website"
+        static let imgKey = "img_url"
+        static let fundoKey = "fundo"
+        static let responsavelKey = "responsavel_uuid"
+    }
+    
+    override init(){}
+    
+    init(uuid :String, nome :String, descricao :String, facebook :String, website :String, img_url :String, fundo :Bool, responsavel_uuid :String) {
+        self.uuid = uuid
+        self.nome = nome
+        self.descricao = descricao
+        self.facebook = facebook
+        self.website = website
+        self.img_url = img_url
+        self.fundo  = fundo
+        self.responsavel_uuid = responsavel_uuid
+    }
+    
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(uuid,             forKey: LocalizavelPropertyKey.uuidKey)
+        aCoder.encodeObject(nome,             forKey: LocalizavelPropertyKey.nomeKey)
+        aCoder.encodeObject(descricao,        forKey: LocalizavelPropertyKey.descricaoKey)
+        aCoder.encodeObject(facebook,         forKey: LocalizavelPropertyKey.facebookKey)
+        aCoder.encodeObject(website,          forKey: LocalizavelPropertyKey.websiteKey)
+        aCoder.encodeObject(img_url,          forKey: LocalizavelPropertyKey.imgKey)
+        aCoder.encodeObject(fundo,            forKey: LocalizavelPropertyKey.fundoKey)
+        aCoder.encodeObject(responsavel_uuid, forKey: LocalizavelPropertyKey.responsavelKey)
+    }
 
     func setEsportes(esportes : NSArray){
         for esporte in esportes{
