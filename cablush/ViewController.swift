@@ -28,6 +28,7 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
         delegate?.toggleLeftPanel?()
     }
     
+    @IBOutlet weak var addLocalizavel: UIBarButtonItem!
     @IBOutlet weak var mapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
     let locationManager = CLLocationManager()
@@ -38,6 +39,12 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
     override func viewDidLoad() {
         self.mapView.delegate = self
         super.viewDidLoad()
+        
+        if let usuario = Usuario.loadUsuario(){
+            print(usuario.nome)
+        }else{
+            print("Nothing loaded")
+        }
         
         // Ask for Authorisation from the User.
         self.locationManager.requestAlwaysAuthorization()
@@ -160,7 +167,6 @@ class ViewController: UIViewController,CLLocationManagerDelegate, MKMapViewDeleg
             }
         }
     }
-    
 }
 
 extension ViewController: SidePanelViewControllerDelegate {
