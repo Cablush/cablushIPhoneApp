@@ -14,7 +14,8 @@ import UIKit
 class LocalizavelDetalhesViewController: UIViewController {
     
     var localizavel = Localizavel()
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var videoImg: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var enderecoImg: UIImageView!
@@ -95,6 +96,11 @@ class LocalizavelDetalhesViewController: UIViewController {
                 self.imageView.image = UIImage(data: data)
             }
         }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        scrollView.contentSize = CGSizeMake(375, 700)
     }
     
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {

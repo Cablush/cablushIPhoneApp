@@ -9,15 +9,23 @@
 import Foundation
 import UIKit
 class CadastroViewController : UIViewController {
-    
+   
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var senha: UITextField!
     @IBOutlet weak var confirmaSenha: UITextField!
     
    override func viewDidLoad() {
-        
+     view.addSubview(scrollView)   
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        scrollView.contentSize = CGSizeMake(375, 800)
+    }
+    
+    
     @IBAction func cadastrar(sender: AnyObject) {
         print("Create User")
         if name.text != nil && email.text != nil {
@@ -41,4 +49,6 @@ class CadastroViewController : UIViewController {
         }
         
     }
+    
+    
 }
