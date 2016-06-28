@@ -13,11 +13,19 @@ import MobileCoreServices
 
 class LojaViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     var newMedia: Bool?
     override func viewDidLoad(){
-        
+        view.addSubview(scrollView)
     }
+    
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        scrollView.contentSize = CGSizeMake(375, 900)
+    }
+    
 
     @IBAction func cameraRoll(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(
@@ -90,7 +98,7 @@ class LojaViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    @IBAction func back(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
