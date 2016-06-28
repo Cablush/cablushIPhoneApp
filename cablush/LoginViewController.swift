@@ -37,9 +37,7 @@ class LoginViewController: UIViewController {
            let parseJson = ParseJson()
             if data != nil{
                 parseJson.parseJsonUsuario(data!)
-                let usuario = Usuario()
-                let users = usuario.loadUser()
-                print(users)
+                
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
